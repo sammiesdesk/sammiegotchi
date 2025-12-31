@@ -58,6 +58,7 @@
     clearInterval(decayTimer);
 
     animal.src = 'sprites/dead.png';
+    buttonsList.style.display = 'none';
     reviveBtn.style.display = 'block';
     reviveBtn.onclick = revive;
 
