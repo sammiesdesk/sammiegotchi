@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="case">	
+      <div class="screen">
+        <div class="stats">
+
+          <div title="Hunger statistic">
+            <label for="eat">
+              <i data-lucide="utensils" style="color: salmon"></i>
+            </label>
+            <input
+              type="range"
+              class="health-bar"
+              id="eat"
+              data-need="eat"
+              min="0"
+              max="100"
+              value="50"
+              disabled
+            >
+          </div>
+
+          <div title="Health statistic">
+            <label for="cure">
+              <i data-lucide="pill" style="color: salmon"></i>
+            </label>
+            <input
+              type="range"
+              class="health-bar"
+              id="cure"
+              data-need="cure"
+              min="0"
+              max="100"
+              value="50"
+              disabled
+            >
+          </div>
+
+          <div title="Happiness statistic">
+            <label for="pet">
+              <i data-lucide="heart" style="color: salmon"></i>
+            </label>
+            <input
+              type="range"
+              class="health-bar"
+              id="pet"
+              data-need="pet"
+              min="0"
+              max="100"
+              value="50"
+              disabled
+            >
+          </div>
+
+        </div>
+
+        <div class="creature">
+          <img src="sprites/hello.png" alt="">
+        </div>
+      </div>	
+
+      <div class="buttons">
+        <div>
+          <button id="eatBtn" data-need="eat" title="Feed" aria-label="Feed tamagotchi">
+            <i data-lucide="utensils"></i>
+          </button>
+        </div>
+
+        <div>
+          <button id="cureBtn" data-need="cure" title="Cure" aria-label="Cure tamagotchi">
+            <i data-lucide="pill"></i>
+          </button>
+        </div>
+
+        <div>
+          <button id="petBtn" data-need="pet" title="Cuddle" aria-label="Pet tamagotchi">
+            <i data-lucide="heart"></i>
+          </button>
+        </div>
+      </div>
+
+      <button id="revive">Revive</button>
+    </div>
+    <!-- scripts -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="renderer.js"></script>
+  </body>
+</html>
